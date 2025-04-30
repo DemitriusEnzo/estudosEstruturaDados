@@ -2,7 +2,7 @@ package FilasSequenciais.filas;
 
 public class FilaInt {
     final int N = 3;
-    int dados[] = new int[N];
+    int[] dados = new int[N];
     int ini, fim, cont;
 
     public void init() {
