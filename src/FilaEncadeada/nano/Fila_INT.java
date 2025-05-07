@@ -1,4 +1,4 @@
-package FilaEncadeada;
+package FilaEncadeada.nano;
 
 import java.util.Scanner;
 
