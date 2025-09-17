@@ -37,4 +37,34 @@ public class ABBint {
         }
         return cont;
     }
+
+    public boolean consulta(NO p, int valor){
+        if (p != null){
+            if (p.dado == valor) {
+                return true;
+            } else if (p.dado < valor) {
+                return consulta(p.dir, valor);
+            } else {
+                return consulta(p.esq, valor);
+            }
+        }
+        return false;
+    }
+
+    public int contaConsulta(NO p, int valor, int cont){
+        if (p != null){
+            cont++;
+            if (p.dado == valor) {
+                return cont;
+            } else if (p.dado < valor) {
+                return contaConsulta(p.dir, valor, cont);
+            } else {
+                return contaConsulta(p.esq, valor, cont);
+            }
+        }
+        return cont;
+    }
 }
+
+
+

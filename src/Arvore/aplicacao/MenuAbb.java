@@ -15,6 +15,8 @@ public class MenuAbb {
             System.out.println("1 - Inserir 1 valor na ABB");
             System.out.println("2 - Apresenta ABB (em ordem");
             System.out.println("3 - Conta nos da ABB");
+            System.out.println("4 - Consulta valor");
+            System.out.println("5 - Conta Consulta");
             System.out.print("Opcao: ");
             opcao = le.nextInt();
             switch (opcao) {
@@ -32,12 +34,24 @@ public class MenuAbb {
                     System.out.println();
                     break;
                 case 3:
-                    System.out.println("qtd de nos: "+abb.contaNos(abb.root, 0));
+                    System.out.println("qtd de nos: " + abb.contaNos(abb.root, 0));
+                    break;
+                case 4:
+                    System.out.println("Qual o valor?");
+                    valor = le.nextInt();
+                    System.out.println("Tem o numero? " + abb.consulta(abb.root, valor));
+                    break;
+                case 5:
+                    System.out.println("Qual o valor?");
+                    valor = le.nextInt();
+                    System.out.println("Quantas consultas? " + abb.contaConsulta(abb.root, valor, 0));
                     break;
                 default:
                     System.out.println("Opcao invalida");
             }
-        }while (opcao!=0);
+        } while (opcao != 0);
         le.close();
+
     }
+
 }
